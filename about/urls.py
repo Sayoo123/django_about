@@ -22,4 +22,5 @@ from django.urls import path
 urlpatterns = [
     path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
+    path('contact/',include('contact.urls'))
 ]
