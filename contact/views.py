@@ -10,7 +10,7 @@ def contactnew(request):
                 email = request.POST.get('email')
                 subject = request.POST.get('subject')
                 message = request.POST.get('message')
-                contact_data = contact(name = name, email=email, subject=subject,message=message)
-                contact_data.save()
+                contact.objects.create(name = name, email=email, subject=subject,message=message)
+            
                 return render(request, "indexnew.html")  
       return render(request,"indexnew.html")
